@@ -5,8 +5,25 @@
     </div>
   </div>
   <div class="row">
-    <div class="col-12"><button class="btn btn-primary">
+    <div class="col-12">
+      <input type="text" [(ngModel)]="titulo" placeholder="introduzca un titulo" name="" id="" class="form-control">
+    </div>
+    <div class="col-12"><button (click)="agregarTitulo()" class="btn btn-primary">
       dar click
     </button></div>
+  </div>
+
+  <div class="row">
+    <div class="col-4">
+      <div class="card" style="width: 18rem;">
+        <img src="..." class="card-img-top" alt="...">
+        <div *ngFor="let item of arreglo;let indice = index;" class="card-body">
+          <h5 class="card-title">{{item}}</h5>
+          <p class="card-text">Este es el número de placas: {{indice}}.</p>
+          <a href="#" class="btn btn-primary">Go somewhere</a>
+        </div>
+      </div>
+      
+    </div>
   </div>
 </div>

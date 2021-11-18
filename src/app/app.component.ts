@@ -6,5 +6,13 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
+  titulo:string ="";
   title = 'desplegar';
+
+  public arreglo:Array<string> = [];
+
+  public agregarTitulo(){
+      this.arreglo.push(this.titulo);
+      this.titulo = "";
+  }
 }
