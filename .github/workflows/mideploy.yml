@@ -15,5 +15,12 @@ jobs:
       - run: npm install
       - run: npm install -g @angular/cli
       - run: ng build
-      
+      - name: depliege final
+        uses: w9jds/firebase-action@master
+        with:
+          args: deploy --only hosting
+        env:
+          FIREBASE_TOKEN: ${{ secrets.FIREBASE_TOKEN }}
+
+
 
